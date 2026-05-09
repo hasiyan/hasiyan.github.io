@@ -1,1 +1,169 @@
-h
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Don Hasitha Nanayakkara | IT Portfolio</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:#0a0a0a;color:#f0f0f0;font-family:'Segoe UI',system-ui,sans-serif;line-height:1.6}
+nav{position:fixed;top:0;left:0;right:0;background:rgba(10,10,10,0.95);backdrop-filter:blur(12px);border-bottom:1px solid #1a1a1a;z-index:100;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
+.logo{font-weight:700;font-size:.95rem;letter-spacing:.04em}.logo span{color:#555;font-weight:400}
+nav ul{list-style:none;display:flex;gap:2rem}
+nav a{color:#555;text-decoration:none;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;transition:color .2s}
+nav a:hover{color:#fff}
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:6rem 2rem 4rem}
+.badge{display:inline-block;border:1px solid #1f1f1f;color:#555;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;padding:.4rem 1.1rem;border-radius:999px;margin-bottom:1.75rem}
+h1{font-size:clamp(2.8rem,8vw,5.5rem);font-weight:800;letter-spacing:-.03em;line-height:1.05;margin-bottom:1rem}
+h1 .dim{color:#222}
+.hero p{color:#666;font-size:1rem;max-width:480px;margin:0 auto 2.5rem}
+.btns{display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:.4rem;padding:.7rem 1.6rem;border-radius:8px;font-size:.85rem;font-weight:600;text-decoration:none;transition:all .2s}
+.btn-w{background:#fff;color:#000}.btn-w:hover{background:#ddd}
+.btn-d{background:transparent;color:#f0f0f0;border:1px solid #222}.btn-d:hover{border-color:#444;background:#111}
+section{padding:5rem 2rem;border-top:1px solid #111}
+.wrap{max-width:960px;margin:0 auto}
+.label{font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:#444;margin-bottom:.4rem}
+h2{font-size:clamp(1.8rem,4vw,2.5rem);font-weight:700;color:#fff;margin-bottom:2.5rem;letter-spacing:-.02em}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+.about-text p{color:#666;margin-bottom:.9rem;font-size:.9rem}
+.about-text strong{color:#ddd}
+.skills{display:grid;grid-template-columns:1fr 1fr;gap:.5rem}
+.sk{background:#111;border:1px solid #1a1a1a;border-radius:7px;padding:.6rem .8rem}
+.sk b{color:#ddd;display:block;font-size:.82rem;margin-bottom:.1rem}
+.sk span{color:#555;font-size:.76rem}
+.certs{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:1rem}
+.cert{background:#111;border:1px solid #1a1a1a;border-radius:10px;padding:1.2rem 1.4rem;display:flex;gap:.9rem}
+.ci{width:34px;height:34px;border-radius:7px;background:#1a1a1a;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
+.cert h3{color:#ddd;font-size:.86rem;margin-bottom:.15rem}
+.cert p{color:#555;font-size:.74rem}
+.pill{display:inline-block;font-size:.68rem;padding:.15rem .5rem;border-radius:999px;margin-top:.35rem;font-weight:600}
+.done{background:#0d1f0d;color:#5cb85c;border:1px solid #1a3a1a}
+.wip{background:#1f1a08;color:#c9a227;border:1px solid #3a2e10}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.1rem}
+.card{background:#111;border:1px solid #1a1a1a;border-radius:12px;padding:1.4rem;transition:border-color .2s,transform .2s}
+.card:hover{border-color:#333;transform:translateY(-3px)}
+.tags{display:flex;gap:.35rem;flex-wrap:wrap;margin-bottom:.7rem}
+.tag{background:#1a1a1a;color:#555;font-size:.7rem;padding:.12rem .45rem;border-radius:4px}
+.card h3{color:#fff;font-size:.93rem;font-weight:600;margin-bottom:.4rem}
+.card p{color:#666;font-size:.82rem;line-height:1.5}
+.card a{display:inline-block;color:#555;text-decoration:none;font-size:.78rem;margin-top:.9rem}
+.card a:hover{color:#ccc}
+.tl{display:flex;flex-direction:column}
+.ti{display:grid;grid-template-columns:150px 1fr;gap:2rem;padding:1.8rem 0;border-bottom:1px solid #111}
+.ti:last-child{border-bottom:none}
+.td{color:#444;font-size:.8rem;padding-top:.15rem}
+.ti h3{color:#e0e0e0;font-size:.93rem;font-weight:600;margin-bottom:.15rem}
+.co{color:#555;font-size:.8rem;margin-bottom:.6rem}
+.ti ul{list-style:none}
+.ti li{font-size:.82rem;color:#666;padding-left:.9rem;position:relative;margin-bottom:.25rem}
+.ti li::before{content:'–';position:absolute;left:0;color:#333}
+#contact{text-align:center}
+#contact h2{margin-bottom:.75rem}
+#contact>div>p{color:#666;margin-bottom:2rem}
+footer{border-top:1px solid #111;padding:1.8rem 2rem;text-align:center;color:#333;font-size:.78rem}
+@media(max-width:660px){nav ul{display:none}.about-grid{grid-template-columns:1fr}.ti{grid-template-columns:1fr;gap:.4rem}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="logo">Don Hasitha <span>/ Portfolio</span></div>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#certs">Certs</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+<div class="hero">
+  <div>
+    <div class="badge">Open to Apprenticeships &amp; IT Roles &middot; Greater Liverpool</div>
+    <h1>Don Hasitha<br><span class="dim">Nanayakkara</span></h1>
+    <p>BSc Computer Science Graduate &middot; Azure Certified &middot; Aspiring Cloud Support Specialist</p>
+    <div class="btns">
+      <a href="https://github.com/hasiyan" target="_blank" class="btn btn-w">GitHub</a>
+      <a href="mailto:Hasitha.cn98@gmail.com" class="btn btn-d">Email Me</a>
+      <a href="https://linkedin.com/in/don-hasitha" target="_blank" class="btn btn-d">LinkedIn</a>
+    </div>
+  </div>
+</div>
+<section id="about">
+  <div class="wrap">
+    <div class="label">Who I am</div>
+    <h2>About Me</h2>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>I'm an <strong>entry-level IT professional</strong> with a BSc (Hons) Computer Science from the University of Hertfordshire (2025), with practical experience in technical support, cloud technologies, and system automation.</p>
+        <p>I hold <strong>Microsoft Azure Fundamentals (AZ-900)</strong> and am working toward <strong>CompTIA A+</strong>. My GitHub showcases real projects covering networking diagnostics, system monitoring, and help desk tooling.</p>
+        <p>Outside of tech, I work night shifts as a Care Assistant — sharpening my ability to stay calm under pressure, communicate clearly, and work autonomously.</p>
+      </div>
+      <div class="skills">
+        <div class="sk"><b>Microsoft Azure</b><span>AZ-900 Certified</span></div>
+        <div class="sk"><b>Windows 10/11</b><span>Support &amp; Config</span></div>
+        <div class="sk"><b>Networking</b><span>TCP/IP, DNS, DHCP</span></div>
+        <div class="sk"><b>Python</b><span>Scripting &amp; Automation</span></div>
+        <div class="sk"><b>Bash</b><span>Sysadmin Scripts</span></div>
+        <div class="sk"><b>Active Directory</b><span>User &amp; Group Mgmt</span></div>
+        <div class="sk"><b>Remote Support</b><span>RDP, Teams, Jira</span></div>
+        <div class="sk"><b>Linux</b><span>Fundamentals</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="certs">
+  <div class="wrap">
+    <div class="label">Credentials</div>
+    <h2>Certifications</h2>
+    <div class="certs">
+      <div class="cert"><div class="ci">☁</div><div><h3>Azure Fundamentals (AZ-900)</h3><p>Microsoft Certified</p><span class="pill done">✓ Completed</span></div></div>
+      <div class="cert"><div class="ci">🔧</div><div><h3>CompTIA A+ (220-1201 &amp; 1202)</h3><p>CompTIA</p><span class="pill wip">In Progress 2026</span></div></div>
+      <div class="cert"><div class="ci">🌐</div><div><h3>Networking Essentials</h3><p>Cisco Networking Academy</p><span class="pill done">✓ Completed</span></div></div>
+      <div class="cert"><div class="ci">💻</div><div><h3>IT Support Professional</h3><p>Google Certificate</p><span class="pill done">✓ Completed</span></div></div>
+      <div class="cert"><div class="ci">⚡</div><div><h3>AWS Cloud Fundamentals</h3><p>Amazon Web Services</p><span class="pill wip">Ongoing</span></div></div>
+    </div>
+  </div>
+</section>
+<section id="projects">
+  <div class="wrap">
+    <div class="label">Built by me</div>
+    <h2>Projects</h2>
+    <div class="grid">
+      <div class="card"><div class="tags"><span class="tag">Python</span><span class="tag">Networking</span></div><h3>Network Connectivity Troubleshooter</h3><p>CLI tool for DNS resolution, ping tests, and port checks. Mirrors real-world Azure cloud support diagnostic workflows.</p><a href="https://github.com/hasiyan/IT-Support-Portfolio" target="_blank">View on GitHub</a></div>
+      <div class="card"><div class="tags"><span class="tag">Bash</span><span class="tag">Sysadmin</span></div><h3>Active Directory Simulation</h3><p>Automates user/group creation, assignment, and account management demonstrating Azure identity and access management concepts.</p><a href="https://github.com/hasiyan/IT-Support-Portfolio" target="_blank">View on GitHub</a></div>
+      <div class="card"><div class="tags"><span class="tag">Python</span><span class="tag">Monitoring</span></div><h3>System Health Monitor</h3><p>Monitors CPU, memory, disk, and network config. Applicable to cloud resource monitoring and proactive Azure support tasks.</p><a href="https://github.com/hasiyan/IT-Support-Portfolio" target="_blank">View on GitHub</a></div>
+      <div class="card"><div class="tags"><span class="tag">Python</span><span class="tag">OOP</span></div><h3>IT Support Ticket System</h3><p>Full help desk ticketing workflow — create, update, assign, and track tickets simulating real service desk operations.</p><a href="https://github.com/hasiyan/IT-Support-Portfolio" target="_blank">View on GitHub</a></div>
+      <div class="card"><div class="tags"><span class="tag">Full-stack</span></div><h3>E-Commerce App</h3><p>Full-stack application demonstrating web development, backend logic, and database management.</p><a href="https://github.com/hasiyan/e-commerce-app" target="_blank">View on GitHub</a></div>
+      <div class="card"><div class="tags"><span class="tag">Backend</span><span class="tag">API</span></div><h3>SilkenSoft Backend</h3><p>Backend system covering API design, server management, and data handling for a real-world software project.</p><a href="https://github.com/hasiyan/SilkenSoft-Backend" target="_blank">View on GitHub</a></div>
+    </div>
+  </div>
+</section>
+<section id="experience">
+  <div class="wrap">
+    <div class="label">Background</div>
+    <h2>Experience &amp; Education</h2>
+    <div class="tl">
+      <div class="ti"><div class="td">Jan – Aug 2022</div><div><h3>IT Trainee</h3><div class="co">Creative Software · Sri Lanka</div><ul><li>Resolved tickets across Windows OS, hardware, and networking</li><li>Supported software installs, device configs, and network troubleshooting</li><li>Communicated technical solutions clearly to non-technical users</li></ul></div></div>
+      <div class="ti"><div class="td">2023 – Present</div><div><h3>Care Assistant (Night)</h3><div class="co">MHA</div><ul><li>Works independently with high responsibility under pressure</li><li>Maintains accurate documentation and compliance reporting</li><li>Collaborates effectively across multidisciplinary teams</li></ul></div></div>
+      <div class="ti"><div class="td">2020 – 2023</div><div><h3>Sales Assistant</h3><div class="co">Sports Direct</div><ul><li>Customer problem resolution and interpersonal communication</li><li>Fast-paced team environment, consistently meeting targets</li></ul></div></div>
+      <div class="ti"><div class="td">2025</div><div><h3>BSc (Hons) Computer Science</h3><div class="co">University of Hertfordshire</div><ul><li>Graduated 2025 · Software engineering, networking, and systems focus</li></ul></div></div>
+    </div>
+  </div>
+</section>
+<section id="contact">
+  <div class="wrap">
+    <div class="label">Let's connect</div>
+    <h2>Get In Touch</h2>
+    <p>Open to apprenticeships, IT support roles, and cloud opportunities across the UK.</p>
+    <div class="btns">
+      <a href="mailto:Hasitha.cn98@gmail.com" class="btn btn-w">Hasitha.cn98@gmail.com</a>
+      <a href="https://github.com/hasiyan" target="_blank" class="btn btn-d">github.com/hasiyan</a>
+      <a href="tel:07933614977" class="btn btn-d">07933 614977</a>
+    </div>
+  </div>
+</section>
+<footer>Don Hasitha Nanayakkara · Greater Liverpool · BSc Computer Science · Azure Certified</footer>
+</body>
+</html>
+
